@@ -1,0 +1,10 @@
+
+.nav__transaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav__transaction > h2{
+    font: var(--font-2);
+    color: var(--color-grey-3);
+}
