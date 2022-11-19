@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 
-export function Button({ id, text }) {
+export function Button({ id, text, type }) {
   return (
     <React.Fragment>
-      <button className="button__primary" id={id}>
+      <button className="button__primary" type={type} id={id}>
         {text}
       </button>
     </React.Fragment>

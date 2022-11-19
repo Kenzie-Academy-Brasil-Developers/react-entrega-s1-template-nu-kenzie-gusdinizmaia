@@ -2,6 +2,7 @@ import React from "react";
 import { FormProfile } from "../../components/FormProfile";
 import { Header } from "../../components/Header";
 import { NavTransaction } from "../../components/NavTransaction";
+import { Total } from "../../components/Total";
 import { Card } from "../../components/Card";
 
 import "./style.css";
@@ -13,6 +14,7 @@ export function ProfilePage() {
       <main className="profile__page">
         <section className="container__create">
           <FormProfile />
+          <Total value="15.00" />
         </section>
         <section className="container__resumo">
           <NavTransaction />

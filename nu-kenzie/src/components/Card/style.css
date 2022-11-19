@@ -1,0 +1,37 @@
+.card{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    border-left: 4px solid transparent;
+    border-radius: var(--radius-2);
+    background-color: var(--color-grey-1);
+
+    padding: 15px;
+    position: relative;
+}
+.card{ 
+    border-left: 4px solid var(--color-secondary-1);
+}
+.card .saida{
+    border-left: 4px solid var(--color-grey-3);
+}
+
+.card > h3{
+    font: var(--font-headline);
+    color: var(--color-grey-4);
+}
+.card > p{
+    font: var(--font-4);
+    color: var(--color-grey-3);
+
+    position: absolute;
+    top: 25px;
+    right: 60px;
+}
+.card > h5{
+    font: var(--font-4);
+    color: var(--color-grey-3);
+}

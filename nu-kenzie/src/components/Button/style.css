@@ -12,9 +12,13 @@
 
 .button__grey{
 
-    padding: 13px 20px ;
+    padding: 8px 16px ;
     border-radius: var(--radius);
 
     color: var(--color-grey-3);
     background-color: var(--color-grey-2);
+}
+
+button + button{
+    margin-left: 10px;
 }
