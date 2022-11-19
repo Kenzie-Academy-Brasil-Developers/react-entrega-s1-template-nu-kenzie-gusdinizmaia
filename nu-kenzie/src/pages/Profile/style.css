@@ -8,4 +8,14 @@
     height: calc(100vh - 80px);
 }
 
+.container__resumo > ul{
+    max-height: 200px;
+
+    /* overflow: hidden; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 

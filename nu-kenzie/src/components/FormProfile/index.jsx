@@ -4,12 +4,12 @@ import { useState } from "react";
 
 import "./style.css";
 
-export function FormProfile() {
+export function FormProfile({ callback }) {
   const [description, setDescription] = useState("");
   const [value, setValue] = useState("");
   const [type, setType] = useState("");
 
-  function createTransaction(e) {
+  function createCard(e) {
     e.preventDefault();
 
     let data = {
@@ -19,10 +19,16 @@ export function FormProfile() {
     };
 
     console.log(data);
+
+    let verification = Object.values(data).includes("");
+
+    if (!verification) {
+      callback((transaction) => [...transaction, data]);
+    }
   }
 
   return (
-    <form className="create__transaction" onSubmit={createTransaction}>
+    <form className="create__transaction" onSubmit={createCard}>
       <label htmlFor="">Descrição</label>
       <Input
         onChange={(e) => setDescription(e.target.value)}
@@ -35,6 +41,7 @@ export function FormProfile() {
         <Input
           onChange={(e) => setValue(e.target.value)}
           type="number"
+          step="0.01"
           text="1"
         />
       </div>
