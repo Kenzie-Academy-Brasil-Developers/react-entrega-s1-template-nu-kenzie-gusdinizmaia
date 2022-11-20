@@ -41,11 +41,14 @@ body{
   --radius-2:4px
 }
 
-/* :root {
+/* .black {
 
   --color-grey-1:#F8F9FA;
   --color-grey-2:#E9ECEF;
   --color-grey-3:#868E96;
   --color-grey-4:#212529;
+
+  --color-white:blue;
+  --color-primary-1:white;
 } */
 

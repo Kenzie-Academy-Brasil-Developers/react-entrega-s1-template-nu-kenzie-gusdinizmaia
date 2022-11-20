@@ -9,13 +9,18 @@ export function FormProfile({ callback }) {
   const [value, setValue] = useState("");
   const [type, setType] = useState("");
 
+  const [id, setId] = useState(0);
+
   function createCard(e) {
     e.preventDefault();
+
+    setId(id + 1);
 
     let data = {
       description: description,
       value: value,
       type: type,
+      id: id,
     };
 
     console.log(data);
