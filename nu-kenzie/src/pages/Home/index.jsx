@@ -3,14 +3,14 @@ import "../Home/style.css";
 import { Logo } from "../../components/Logo";
 import { Button } from "../../components/Button";
 
-export function HomePage() {
+export function HomePage({ callbackPage }) {
   return (
-    <main>
+    <main className="home__page black">
       <section className="container__logo">
         <Logo />
         <p>Centralize o controle das suas finanças</p>
         <span>de forma rápida e segura</span>
-        <Button id="button--start" text="iniciar" />
+        <Button callback={callbackPage} id="button--start" text="iniciar" />
       </section>
       <section className="container__img">
         <figure>

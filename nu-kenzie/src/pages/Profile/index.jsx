@@ -10,14 +10,16 @@ import { RenderFilter } from "../../render/RenderFilter.jsx";
 
 import "./style.css";
 
-export function ProfilePage() {
+export function ProfilePage({ callbackPage }) {
   const [renderCards, setRenderCards] = useState("all");
   const [transaction, setTransaction] = useState([]);
   const [filterTransaction, setFilterTransaction] = useState([]);
 
+  console.log(callbackPage);
+
   return (
     <React.Fragment>
-      <Header />
+      <Header callback={callbackPage} />
       <main className="profile__page">
         <section className="container__create">
           <FormProfile callback={setTransaction} />

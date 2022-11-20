@@ -1,5 +1,5 @@
 
-main{
+.home__page{
     width: 100vw;
     height: 100vh;
 
@@ -7,6 +7,9 @@ main{
     flex-direction: row;
     align-items: center;
 
+    padding: 0 8%;
+
+    background-color: var(--color-grey-1);
 }
 
 section{

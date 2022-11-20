@@ -3,11 +3,13 @@ import "./style.css";
 
 import { Logo } from "../Logo";
 
-export function Header() {
+export function Header({ callback }) {
   return (
     <header className="container__nav">
       <Logo />
-      <button className="button__grey">Inicio</button>
+      <button onClick={(e) => callback("home")} className="button__grey">
+        Inicio
+      </button>
     </header>
   );
 }

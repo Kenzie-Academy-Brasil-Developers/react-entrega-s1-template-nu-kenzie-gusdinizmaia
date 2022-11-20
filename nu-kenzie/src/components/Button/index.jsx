@@ -4,10 +4,16 @@ import "./style.css";
 import { RenderFilter } from "../../render/RenderFilter";
 import { RenderCards } from "../../render/RenderCards";
 
-export function Button({ id, text, type }) {
+export function Button({ callback, id, text, type }) {
+  console.log(callback);
   return (
     <React.Fragment>
-      <button className="button__primary" type={type} id={id}>
+      <button
+        onClick={(e) => callback("profile")}
+        className="button__primary"
+        type={type}
+        id={id}
+      >
         {text}
       </button>
     </React.Fragment>
