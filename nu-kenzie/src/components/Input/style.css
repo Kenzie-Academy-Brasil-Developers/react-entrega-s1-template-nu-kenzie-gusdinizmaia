@@ -1,0 +1,14 @@
+input{
+    padding: 13px 13px;
+}
+.input__grey{
+    background-color: var(--color-grey-1);
+    font: var(--font-headline);
+    color: var(--color-grey-4);
+
+    border-radius: var(--radius);
+}
+.input__grey ::placeholder{
+    font: var(--font-headline);
+    color: var(--color-grey-2);
+}

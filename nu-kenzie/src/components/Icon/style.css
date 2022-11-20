@@ -1,0 +1,14 @@
+#card__button--close{
+    cursor: pointer;
+
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    padding: 2px;
+    border-radius: var(--radius-2);
+
+    font-size: 18px;
+
+    color: var(--color-grey-4);
+    background-color: var(--color-grey-2);
+}

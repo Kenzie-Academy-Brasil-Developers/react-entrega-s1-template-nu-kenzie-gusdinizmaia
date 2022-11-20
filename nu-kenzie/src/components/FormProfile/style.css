@@ -1,0 +1,44 @@
+
+.create__transaction{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding:35px 25px;
+    border: 1px solid var(--color-grey-2);
+
+}
+.create__transaction > input { 
+    width: 100%;
+}
+.create__transaction > span{
+    font: var(--font-body);
+    color: var(--color-grey-3);
+    width: 100%;
+}
+
+.create__transaction > div{
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+}
+
+.create__transaction label{
+    font: var(--font-body);
+}
+.create__transaction > div > label{
+    margin-bottom: 15px;
+}
+.create__transaction > div > select{
+    background-color: var(--color-grey-1);
+    font: var(--font-headline);
+    color: var(--color-grey-4);
+    padding: 16px 13px;
+    border: none;
+}
+.create__transaction > button{
+    width: 100%;
+}

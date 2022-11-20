@@ -1,0 +1,14 @@
+
+.nav__transaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+.nav__transaction > h2{
+    font: var(--font-headline);
+    font-weight: 700;
+    color: var(--color-grey-4);
+}

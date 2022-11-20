@@ -1,0 +1,27 @@
+button{
+    cursor: pointer;
+}
+
+.button__primary{
+    font: var(--font-headline);
+
+    padding: 13px 20px ;
+    width: 75%;
+    border-radius: var(--radius);
+
+    color: var(--color-white);
+    background-color: var(--color-primary-1);
+}
+
+.button__grey{
+
+    padding: 8px 16px ;
+    border-radius: var(--radius);
+
+    color: var(--color-grey-3);
+    background-color: var(--color-grey-2);
+}
+
+button + button{
+    margin-left: 10px;
+}
