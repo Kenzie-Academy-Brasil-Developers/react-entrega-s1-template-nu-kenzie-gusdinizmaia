@@ -38,7 +38,15 @@
     color: var(--color-grey-4);
     padding: 16px 13px;
     border: none;
+    border-radius: var(--radius-2);
+
+    /* -webkit-appearance:slider-vertical;
+    /* Remove estilo padrão do Chrome */
+    /* -moz-appearance: slider-vertical;
+    /* Remove estilo padrão do FireFox */
+    /* appearance: none; */ 
 }
+
 .create__transaction > button{
     width: 100%;
 }

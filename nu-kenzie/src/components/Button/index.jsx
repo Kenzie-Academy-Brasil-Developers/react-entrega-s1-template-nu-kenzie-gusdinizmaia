@@ -1,15 +1,11 @@
 import React from "react";
 import "./style.css";
 
-import { RenderFilter } from "../../render/RenderFilter";
-import { RenderCards } from "../../render/RenderCards";
-
 export function Button({ callback, id, text, type }) {
-  console.log(callback);
   return (
     <React.Fragment>
       <button
-        onClick={(e) => callback("profile")}
+        onClick={(e) => (callback ? callback("profile") : "")}
         className="button__primary"
         type={type}
         id={id}

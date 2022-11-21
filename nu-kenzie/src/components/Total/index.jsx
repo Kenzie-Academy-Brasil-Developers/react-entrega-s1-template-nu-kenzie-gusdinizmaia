@@ -2,7 +2,13 @@ import "./style.css";
 
 export function Total({ array }) {
   function price() {
-    const values = array.map((elem) => parseInt(elem.value));
+    const values = array.map((elem) => {
+      if (elem.type === "saida") {
+        return -parseInt(elem.value);
+      }
+      return parseInt(elem.value);
+    });
+
     const newArray = values.reduce((acc, value) => acc + value, 0);
 
     return newArray.toLocaleString("pt-BR", {

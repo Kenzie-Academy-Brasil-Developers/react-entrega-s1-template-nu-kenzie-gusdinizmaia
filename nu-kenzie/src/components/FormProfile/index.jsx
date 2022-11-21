@@ -23,9 +23,7 @@ export function FormProfile({ callback }) {
       id: id,
     };
 
-    console.log(data);
-
-    let verification = Object.values(data).includes("");
+    const verification = Object.values(data).includes("");
 
     if (!verification) {
       callback((transaction) => [...transaction, data]);
@@ -47,7 +45,8 @@ export function FormProfile({ callback }) {
           onChange={(e) => setValue(e.target.value)}
           type="number"
           step="0.01"
-          text="1"
+          text="R$"
+          id="input__value"
         />
       </div>
       <div>
