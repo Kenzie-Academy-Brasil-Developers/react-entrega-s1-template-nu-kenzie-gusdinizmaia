@@ -12,3 +12,7 @@ input{
     font: var(--font-headline);
     color: var(--color-grey-2);
 }
+
+#input__value::placeholder{
+    text-align: end;
+}

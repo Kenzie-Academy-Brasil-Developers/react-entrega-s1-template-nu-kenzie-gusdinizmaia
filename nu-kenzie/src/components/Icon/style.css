@@ -12,3 +12,9 @@
     color: var(--color-grey-4);
     background-color: var(--color-grey-2);
 }
+
+#card__button--close:hover{
+
+    color: var(--color-grey-2);
+    background-color: var(--color-grey-4);
+}

@@ -8,8 +8,9 @@ export function NavTransaction({ render, callbackFilter, array }) {
     <div className="nav__transaction">
       <h2>Resumo financeiro</h2>
       <nav>
-        {types.map((elem) => (
+        {types.map((elem, index) => (
           <ButtonGrey
+            key={index}
             filter={elem}
             text={elem}
             callbackFilter={callbackFilter}

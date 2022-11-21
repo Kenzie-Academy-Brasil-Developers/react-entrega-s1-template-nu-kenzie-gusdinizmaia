@@ -13,8 +13,11 @@ button{
     background-color: var(--color-primary-1);
 }
 
-.button__grey{
+.button__primary:hover{
+    background-color: var(--color-primary-2);
+}
 
+.button__grey{
     padding: 8px 16px ;
     border-radius: var(--radius);
 
@@ -22,6 +25,14 @@ button{
     background-color: var(--color-grey-2);
 }
 
-button + button{
-    margin-left: 10px;
+.button__grey:hover{
+    color: var(--color-grey-1);
+    background-color:var(--color-grey-4)
 }
+
+.button__grey:focus{
+    background-color: var(--color-primary-1);
+    color: var(--color-grey-2);
+}
+
+

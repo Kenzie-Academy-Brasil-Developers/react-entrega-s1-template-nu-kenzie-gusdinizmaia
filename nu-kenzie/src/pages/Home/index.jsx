@@ -2,6 +2,7 @@ import "../Home/style.css";
 
 import { Logo } from "../../components/Logo";
 import { Button } from "../../components/Button";
+import imgLogo from "../../assents/img/home.png";
 
 export function HomePage({ callbackPage }) {
   return (
@@ -14,7 +15,7 @@ export function HomePage({ callbackPage }) {
       </section>
       <section className="container__img">
         <figure>
-          <img src="../../assents/img/home-img.png" alt="home-img" />
+          <img src={imgLogo} alt="imagem-da-home" />
         </figure>
       </section>
     </main>

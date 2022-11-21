@@ -15,15 +15,17 @@ export function ProfilePage({ callbackPage }) {
   const [transaction, setTransaction] = useState([]);
   const [filterTransaction, setFilterTransaction] = useState([]);
 
-  console.log(callbackPage);
-
   return (
     <React.Fragment>
       <Header callback={callbackPage} />
       <main className="profile__page">
         <section className="container__create">
           <FormProfile callback={setTransaction} />
-          <Total array={transaction} />
+          {renderCards === "all" ? (
+            <Total array={transaction} />
+          ) : (
+            <Total array={filterTransaction} />
+          )}
         </section>
         <section className="container__resumo">
           <NavTransaction
