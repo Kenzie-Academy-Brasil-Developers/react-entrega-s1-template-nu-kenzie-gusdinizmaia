@@ -1,13 +1,10 @@
 import React from "react";
 import "./style.css";
 
-export function Icon({ text, id, callback }) {
+export function Icon({ text, id, callback, callbackFilter }) {
   function removeCard() {
-    callback((array) => {
-      let a = array.filter((elem) => elem.id !== id);
-
-      return a;
-    });
+    callback((array) => array.filter((elem) => elem.id !== id));
+    callbackFilter((arrayF) => arrayF.filter((elem) => elem.id !== id));
   }
 
   return (

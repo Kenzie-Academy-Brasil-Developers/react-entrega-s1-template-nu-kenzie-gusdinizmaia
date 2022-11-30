@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import { ButtonLogin } from "./config/createTransaction";
 
 import { HomePage } from "./pages/Home";
 import { ProfilePage } from "./pages/Profile";

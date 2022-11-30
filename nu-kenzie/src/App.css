@@ -3,8 +3,9 @@
 *{
   margin: 0;
   padding: 0;
-  border: 0;
+  border: 0 none;
   box-sizing: border-box;
+  text-decoration: none;
   list-style: none;
   font-family: 'Nunito', sans-serif;
 }
@@ -13,6 +14,12 @@ body{
   height: 100vh;
   width: 100vw;
   max-width: 100%;
+}
+
+input:focus, select:focus, textarea:focus{
+  box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
 }
 
 

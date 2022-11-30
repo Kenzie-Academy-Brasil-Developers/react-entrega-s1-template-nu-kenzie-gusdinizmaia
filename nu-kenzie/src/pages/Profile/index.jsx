@@ -1,48 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-import { FormProfile } from "../../components/FormProfile";
 import { Header } from "../../components/Header";
 import { NavTransaction } from "../../components/NavTransaction";
-import { Total } from "../../components/Total";
-
-import { RenderCards } from "../../render/RenderCards.jsx";
-import { RenderFilter } from "../../render/RenderFilter.jsx";
+import { SectionForm } from "../../components/SectionForm";
+import { RenderCards } from "../../render/RenderCards";
 
 import "./style.css";
 
 export function ProfilePage({ callbackPage }) {
-  const [renderCards, setRenderCards] = useState("all");
+  const [renderCards, setRenderCards] = useState("todos");
   const [transaction, setTransaction] = useState([]);
   const [filterTransaction, setFilterTransaction] = useState([]);
+
+  useEffect(() => {
+    function AttFilter() {
+      if (renderCards !== "todos") {
+        return setFilterTransaction(() =>
+          transaction.filter((elem) => elem.type === renderCards)
+        );
+      } else {
+        return setFilterTransaction(transaction);
+      }
+    }
+
+    AttFilter();
+  }, [renderCards, transaction]);
 
   return (
     <React.Fragment>
       <Header callback={callbackPage} />
       <main className="profile__page">
-        <section className="container__create">
-          <FormProfile callback={setTransaction} />
-          {renderCards === "all" ? (
-            <Total array={transaction} />
-          ) : (
-            <Total array={filterTransaction} />
-          )}
-        </section>
+        <SectionForm
+          setTransaction={setTransaction}
+          filterTransaction={filterTransaction}
+        />
         <section className="container__resumo">
-          <NavTransaction
-            render={setRenderCards}
+          <NavTransaction render={setRenderCards} />
+          <RenderCards
+            array={filterTransaction}
             callbackFilter={setFilterTransaction}
-            array={transaction}
+            callback={setTransaction}
           />
-          <ul>
-            {renderCards === "all" ? (
-              <RenderCards callback={setTransaction} array={transaction} />
-            ) : (
-              <RenderFilter
-                array={filterTransaction}
-                callback={setFilterTransaction}
-              />
-            )}
-          </ul>
         </section>
       </main>
     </React.Fragment>
