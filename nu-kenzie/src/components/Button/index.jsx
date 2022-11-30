@@ -16,18 +16,10 @@ export function Button({ callback, id, text, type }) {
   );
 }
 
-export function ButtonGrey({ filter, text, callbackFilter, render, array }) {
-  function filterCards() {
-    render("filter");
-    if (filter === "todos") {
-      return callbackFilter(array);
-    }
-    let newArray = array.filter((elem) => elem.type === filter);
-    return callbackFilter(newArray);
-  }
+export function ButtonGrey({ filter, text, render }) {
   return (
     <React.Fragment>
-      <button onClick={() => filterCards()} className="button__grey">
+      <button onClick={() => render(filter)} className="button__grey">
         {text}
       </button>
     </React.Fragment>

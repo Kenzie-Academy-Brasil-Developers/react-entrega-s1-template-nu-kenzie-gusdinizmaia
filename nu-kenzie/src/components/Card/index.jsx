@@ -3,7 +3,14 @@ import "./style.css";
 import { Icon } from "../Icon";
 import React from "react";
 
-export function Card({ description, value, type, id, callback }) {
+export function Card({
+  callbackFilter,
+  description,
+  value,
+  type,
+  id,
+  callback,
+}) {
   function borderCard() {
     return type === "entrada"
       ? "4px solid var(--color-secondary-1)"
@@ -20,7 +27,12 @@ export function Card({ description, value, type, id, callback }) {
         })}
       </p>
       <h5>{type}</h5>
-      <Icon text="delete" callback={callback} id={id} />
+      <Icon
+        text="delete"
+        callbackFilter={callbackFilter}
+        callback={callback}
+        id={id}
+      />
     </li>
   );
 }

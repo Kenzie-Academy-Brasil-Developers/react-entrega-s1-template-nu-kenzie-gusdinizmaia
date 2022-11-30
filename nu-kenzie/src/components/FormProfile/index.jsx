@@ -14,8 +14,6 @@ export function FormProfile({ callback }) {
   function createCard(e) {
     e.preventDefault();
 
-    setId(id + 1);
-
     let data = {
       description: description,
       value: value,
@@ -27,6 +25,7 @@ export function FormProfile({ callback }) {
 
     if (!verification) {
       callback((transaction) => [...transaction, data]);
+      setId(id + 1);
     }
   }
 
